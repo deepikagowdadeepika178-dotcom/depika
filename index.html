@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Chen | AI Product Designer & Full-Stack Engineer — Creator of Hostel Buddy AI</title>
+  <meta name="description" content="Portfolio of Alex Chen, Full-Stack Engineer & AI Product Designer. Creator of Hostel Buddy AI, CampusFlow, and intelligent student living applications.">
+  <meta name="keywords" content="Hostel Buddy AI, AI Portfolio, Full Stack Developer, AI Product Designer, React, Python, FastAPI">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alex Chen | Creator of Hostel Buddy AI">
+  <meta property="og:description" content="Explore Hostel Buddy AI and modern AI-powered applications built with human-centric design.">
+  <meta property="og:image" content="assets/hostel-buddy-full.png">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span>Hostel Buddy</span>
+          <span class="brand-ai-badge">AI</span>
+          <span class="brand-tag">Creator Portfolio</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#spotlight" class="nav-link">Hostel Buddy AI</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <a href="#contact" class="btn-primary" id="headerCtaBtn">
+          <span>Let's Connect</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH WORKING INTERACTIVE CHAT MOCKUP
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Column: Bio & Hero Content -->
+        <div class="hero-text-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-pill-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Your AI-Powered Hostel & Campus Companion
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Smartest <br>
+            <span class="highlight-text">Hostel Buddy,</span> <br>
+            <span class="highlight-gradient">Powered by AI</span>
+          </h1>
+
+          <p class="hero-description">
+            Find hostels, manage daily hostel life, get instant answers, and stay connected — all in one intelligent platform created by full-stack AI engineer <strong>Alex Chen</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#spotlight" class="btn-primary" id="heroExploreBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Get Started</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <button class="btn-outline" id="chatBuddyJumpBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Chat with Buddy</span>
+            </button>
+          </div>
+
+          <!-- Creator Profile Card -->
+          <div class="hero-creator-card">
+            <div class="creator-avatar-wrap">
+              <img src="assets/avatar.jpg" alt="Alex Chen - AI Full-Stack Engineer" class="creator-avatar-img">
+              <span class="creator-status-dot" title="Available for projects"></span>
+            </div>
+            <div class="creator-info">
+              <h4>Alex Chen</h4>
+              <p>Lead AI Systems Architect & Creator • Open to Opportunities</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Phone Mockup with Working Chatbot -->
+        <div class="hero-interactive-stage">
+          <!-- Floating Stat Badges -->
+          <div class="floating-chip top-right">
+            <div class="chip-icon blue">🏠</div>
+            <div class="chip-content">
+              <strong>120+</strong>
+              <span>Hostels Mapped</span>
+            </div>
+          </div>
+
+          <div class="floating-chip middle-right">
+            <div class="chip-icon amber">⭐</div>
+            <div class="chip-content">
+              <strong>4.8/5</strong>
+              <span>Student Rating</span>
+            </div>
+          </div>
+
+          <div class="floating-chip bottom-left">
+            <div class="chip-icon green">⚡</div>
+            <div class="chip-content">
+              <strong>&lt; 2s</strong>
+              <span>AI Response Time</span>
+            </div>
+          </div>
+
+          <!-- Smartphone Chassis -->
+          <div class="phone-mockup" id="phoneMockup">
+            <!-- Phone Header -->
+            <div class="phone-mockup-header">
+              <div class="phone-bot-profile">
+                <div class="phone-bot-avatar">🤖</div>
+                <div class="phone-bot-meta">
+                  <h4>Hostel Buddy <span>AI</span></h4>
+                  <div class="phone-bot-status">
+                    <span class="status-dot-pulse"></span>
+                    <span>Online & Ready</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size: 1.2rem; color: var(--text-muted); cursor: pointer;" title="Settings">⋮</div>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="phone-messages-body" id="chatMessagesStream">
+              <!-- Initial Welcome Message -->
+              <div class="chat-bubble bot">
+                Hi! 👋 I'm your Hostel Buddy. How can I help you today?
+                <span class="bubble-time">10:24 AM</span>
+              </div>
+
+              <!-- Default User Message -->
+              <div class="chat-bubble user">
+                Find a hostel near my college.
+                <span class="bubble-time">10:25 AM ✓✓</span>
+              </div>
+
+              <!-- Bot Response with Hostel Card -->
+              <div class="chat-bubble bot">
+                Sure! Here are some great hostel options near your college:
+                
+                <div class="chat-hostel-card">
+                  <div class="chat-hostel-thumb">
+                    🏡
+                  </div>
+                  <div class="chat-hostel-info">
+                    <h5>Green Valley Hostel</h5>
+                    <div class="chat-hostel-meta">
+                      <span>📍 1.2 km away</span>
+                      <span>⭐ 4.5 (120 reviews)</span>
+                    </div>
+                    <button class="chat-hostel-btn" onclick="triggerHostelDetailsModal('Green Valley Hostel')">View Details</button>
+                  </div>
+                </div>
+                <span class="bubble-time">10:25 AM</span>
+              </div>
+            </div>
+
+            <!-- Quick Suggestions Bar -->
+            <div class="quick-prompts-bar">
+              <button class="prompt-chip-btn" data-query="Find a hostel near my college.">📍 Find Hostels</button>
+              <button class="prompt-chip-btn" data-query="What's for dinner tonight in the mess?">🍲 Mess Menu</button>
+              <button class="prompt-chip-btn" data-query="Report WiFi issue in room 302.">🛠️ Report Issue</button>
+              <button class="prompt-chip-btn" data-query="What are the night curfew timings?">⏰ Curfew Hours</button>
+            </div>
+
+            <!-- Input Bar -->
+            <form class="phone-input-bar" id="phoneChatForm">
+              <input type="text" class="phone-input-field" id="chatInputField" placeholder="Type a message..." autocomplete="off">
+              <button type="submit" class="phone-send-btn" id="chatSendBtn" aria-label="Send">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- 3D Mascot Character (Buddy) -->
+          <div class="buddy-robot-companion" id="buddyMascot" title="Click Buddy for a greeting!">
+            <div class="robot-svg-wrap">
+              <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Mascot Glow -->
+                <circle cx="80" cy="80" r="70" fill="url(#mascotGlow)" opacity="0.3"/>
+                <!-- Robot Torso -->
+                <rect x="52" y="88" width="56" height="52" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+                <path d="M72 108L80 100L88 108V118H72V108Z" fill="#5B4DFB"/>
+                <rect x="76" y="112" width="8" height="6" rx="2" fill="#FFFFFF"/>
+                <!-- Robot Head -->
+                <rect x="36" y="24" width="88" height="66" rx="30" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+                <!-- Head Screen Face -->
+                <rect x="44" y="32" width="72" height="50" rx="22" fill="#0F172A"/>
+                <!-- Cyan Smiling Eyes -->
+                <path d="M56 55Q64 43 72 55" stroke="#38BDF8" stroke-width="5" stroke-linecap="round"/>
+                <path d="M88 55Q96 43 104 55" stroke="#38BDF8" stroke-width="5" stroke-linecap="round"/>
+                <!-- Ears Antenna -->
+                <rect x="26" y="44" width="10" height="24" rx="5" fill="#5B4DFB"/>
+                <rect x="124" y="44" width="10" height="24" rx="5" fill="#5B4DFB"/>
+                <!-- Robot Waving Hand -->
+                <ellipse cx="38" cy="106" rx="12" ry="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+                <circle cx="128" cy="84" r="12" fill="#FFFFFF" stroke="#5B4DFB" stroke-width="3"/>
+                <path d="M128 78V84M125 81H131" stroke="#5B4DFB" stroke-width="2"/>
+                <defs>
+                  <radialGradient id="mascotGlow" cx="0.5" cy="0.5" r="0.5">
+                    <stop stop-color="#5B4DFB" stop-opacity="1"/>
+                    <stop offset="1" stop-color="#5B4DFB" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Feature Pillars Row (from the reference design) -->
+      <div class="features-quick-row">
+        <div class="feature-pill-card" onclick="scrollToSection('spotlight')">
+          <div class="pill-icon-box purple">🤖</div>
+          <div class="pill-meta">
+            <h5>AI Assistant</h5>
+            <span>24/7 Smart Support</span>
+          </div>
+        </div>
+
+        <div class="feature-pill-card" onclick="scrollToSection('spotlight')">
+          <div class="pill-icon-box blue">🏠</div>
+          <div class="pill-meta">
+            <h5>Hostel Finder</h5>
+            <span>Find Your Perfect Stay</span>
+          </div>
+        </div>
+
+        <div class="feature-pill-card" onclick="scrollToSection('spotlight')">
+          <div class="pill-icon-box green">🍴</div>
+          <div class="pill-meta">
+            <h5>Food & Mess</h5>
+            <span>Menu, Timings & More</span>
+          </div>
+        </div>
+
+        <div class="feature-pill-card" onclick="scrollToSection('spotlight')">
+          <div class="pill-icon-box orange">🎧</div>
+          <div class="pill-meta">
+            <h5>Complaints & Support</h5>
+            <span>Quick & Easy Resolution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED PROJECT SPOTLIGHT: HOSTEL BUDDY AI DEEP DIVE
+       ========================================================================== -->
+  <section class="spotlight-section" id="spotlight">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-pill-tag">Flagship Case Study</span>
+        <h2 class="section-title">Hostel Buddy AI</h2>
+        <p class="section-subtitle">
+          An intelligent campus living ecosystem combining conversational agents, real-time geolocation matching, and automated hostel administration.
+        </p>
+      </div>
+
+      <!-- Spotlight Hero Card -->
+      <div class="spotlight-hero-card">
+        <!-- Media Visual with Zoom Modal trigger -->
+        <div class="spotlight-preview-media" id="openMockupModalBtn" title="Click to view full high-resolution design">
+          <img src="assets/hostel-buddy-full.png" alt="Hostel Buddy AI Full Design Mockup" class="spotlight-preview-img">
+          <div class="spotlight-overlay-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Original Design Reference
+          </div>
+          <div class="spotlight-expand-prompt">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            Click to View Full Canvas
+          </div>
+        </div>
+
+        <!-- Content Details -->
+        <div class="spotlight-content">
+          <div class="spotlight-tag-row">
+            <span class="tech-tag featured">AI Companion</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vector Search</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+
+          <h3 class="spotlight-heading">Transforming Student Accommodation with AI</h3>
+          <p class="spotlight-text">
+            Traditional hostel hunting and daily hostel living are notoriously fragmented: endless WhatsApp groups, unverified broker listings, and lost maintenance complaint registers. 
+            <strong>Hostel Buddy AI</strong> solves this with an autonomous 24/7 AI companion that knows every curfew rule, room vacancy, mess schedule, and warden contact.
+          </p>
+
+          <div class="spotlight-stats-grid">
+            <div class="stat-item">
+              <h3>120+</h3>
+              <p>Hostels Cataloged</p>
+            </div>
+            <div class="stat-item">
+              <h3>15k+</h3>
+              <p>Active Students</p>
+            </div>
+            <div class="stat-item">
+              <h3>94%</h3>
+              <p>Queries Solved Instantly</p>
+            </div>
+          </div>
+
+          <div class="spotlight-actions">
+            <button class="btn-primary" onclick="scrollAndFocusChat()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Test Interactive Chat</span>
+            </button>
+            <button class="btn-outline" id="inspectDesignBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>Inspect UI System</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Pillars Architecture Grid -->
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background: var(--accent-purple-bg); color: var(--accent-purple);">🤖</div>
+          <h4>RAG Conversational Engine</h4>
+          <p>Context-aware conversational intelligence leveraging vector embeddings on hostel rulebooks, lease terms, and campus FAQs for zero-hallucination accuracy.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background: var(--accent-blue-bg); color: #0284C7;">🏠</div>
+          <h4>Proximity & Budget Matcher</h4>
+          <p>Sub-kilometer geospatial radius filtering matching student budget limits, room type preferences (Single/Double/AC), and safety verification grades.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background: var(--accent-green-bg); color: #059669;">🍴</div>
+          <h4>Automated Mess Intelligence</h4>
+          <p>Synchronized dietary menus, live meal countdown timers, allergy notifications, and transparent student feedback scoring on daily breakfast, lunch, and dinner.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon" style="background: var(--accent-orange-bg); color: #D97706;">🎧</div>
+          <h4>SLA Grievance Resolution</h4>
+          <p>Natural language complaint processing that classifies maintenance tickets (plumbing, Wi-Fi, electricity) and dispatches them to assigned wardens with SLA timers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECTS PORTFOLIO SECTION
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-pill-tag">Engineering Portfolio</span>
+        <h2 class="section-title">Featured Works & Systems</h2>
+        <p class="section-subtitle">
+          A showcase of scalable web applications, machine learning systems, and intuitive user experiences built for modern students and digital teams.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" id="projectFilterBar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="web">Full-Stack Web</button>
+        <button class="filter-btn" data-filter="campus">Campus Tech</button>
+      </div>
+
+      <!-- Projects 3-Column Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: Hostel Buddy AI -->
+        <div class="project-card" data-category="ai campus web">
+          <div class="project-media-wrap">
+            <img src="assets/hostel-buddy-full.png" alt="Hostel Buddy AI" class="project-card-img">
+            <span class="project-category-badge">Flagship • AI Assistant</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">FastAPI</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">LLM / RAG</span>
+            </div>
+            <h3>Hostel Buddy AI</h3>
+            <p>Autonomous conversational companion for student accommodation, hostel discovery, mess schedules, and instant complaint resolution.</p>
+            <div class="project-metrics-row">
+              <span>Impact: <strong>120+ Hostels Mapped</strong></span>
+              <span>Rating: <strong>⭐ 4.8 / 5.0</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#hero" class="card-action-link" onclick="scrollAndFocusChat()">
+                Try Live Chat
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <button class="copy-email-btn" onclick="openMockupModal()">View Mockup</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: CampusFlow AI -->
+        <div class="project-card" data-category="ai campus web">
+          <div class="project-media-wrap">
+            <img src="assets/project-campusflow.jpg" alt="CampusFlow AI Dashboard" class="project-card-img">
+            <span class="project-category-badge">SaaS • Student Portal</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">TypeScript</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">Chart.js</span>
+            </div>
+            <h3>CampusFlow AI</h3>
+            <p>Smart academic analytics platform providing dynamic timetable tracking, predictive attendance warnings, and personalized assignment prioritization.</p>
+            <div class="project-metrics-row">
+              <span>Attendance: <strong>+18% Boost</strong></span>
+              <span>Users: <strong>4,200 Students</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="card-action-link">
+                Request Demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Production Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: StudySync AI -->
+        <div class="project-card" data-category="ai web">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 50%, #3B82F6 100%); display: flex; align-items: center; justify-content: center; color: #fff;">
+            <div style="text-align: center; padding: 20px;">
+              <div style="font-size: 3rem; margin-bottom: 8px;">📚⚡</div>
+              <div style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem;">StudySync AI</div>
+              <div style="font-size: 0.78rem; opacity: 0.85;">Neural Flashcards & Quiz Engine</div>
+            </div>
+            <span class="project-category-badge">EdTech • GenAI</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">Python</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">Tailwind</span>
+            </div>
+            <h3>StudySync AI</h3>
+            <p>Converts dense lecture slides and syllabus PDFs into spaced-repetition flashcards, adaptive mock quizzes, and audio summaries in under 30 seconds.</p>
+            <div class="project-metrics-row">
+              <span>Retention: <strong>+35% Recall</strong></span>
+              <span>Summaries: <strong>50k+ Generated</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="card-action-link">
+                View Architecture
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Open Source</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: MessPulse IoT -->
+        <div class="project-card" data-category="campus web">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #064E3B 0%, #059669 50%, #10B981 100%); display: flex; align-items: center; justify-content: center; color: #fff;">
+            <div style="text-align: center; padding: 20px;">
+              <div style="font-size: 3rem; margin-bottom: 8px;">🥗📊</div>
+              <div style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem;">MessPulse IoT</div>
+              <div style="font-size: 0.78rem; opacity: 0.85;">Hostel Dining Waste Minimizer</div>
+            </div>
+            <span class="project-category-badge">Smart IoT • Analytics</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">IoT Sensors</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <h3>MessPulse IoT</h3>
+            <p>Real-time dining headcount forecasting system predicting meal attendance using hostel gate check-ins to prevent food wastage in large student dining halls.</p>
+            <div class="project-metrics-row">
+              <span>Waste Reduced: <strong>42% Cut</strong></span>
+              <span>Daily Meals: <strong>3,500 Monitored</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="card-action-link">
+                Read Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Campus Deployed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: RoomieMatch AI -->
+        <div class="project-card" data-category="ai campus">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #701A75 0%, #C026D3 50%, #E879F9 100%); display: flex; align-items: center; justify-content: center; color: #fff;">
+            <div style="text-align: center; padding: 20px;">
+              <div style="font-size: 3rem; margin-bottom: 8px;">🤝✨</div>
+              <div style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem;">RoomieMatch AI</div>
+              <div style="font-size: 0.78rem; opacity: 0.85;">Habit Compatibility Engine</div>
+            </div>
+            <span class="project-category-badge">Matching AI • Student Life</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">Vector Cosine</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+            <h3>RoomieMatch AI</h3>
+            <p>Multi-dimensional vector scoring algorithm matching roommates based on sleep chronotypes, study noise tolerance, cleanliness habits, and social preferences.</p>
+            <div class="project-metrics-row">
+              <span>Roomie Disputes: <strong>-64% Drop</strong></span>
+              <span>Matches: <strong>1,800+ Pairs</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="card-action-link">
+                Explore Algorithm
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Live Algorithm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: CampusGate Pass -->
+        <div class="project-card" data-category="web campus">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); display: flex; align-items: center; justify-content: center; color: #fff;">
+            <div style="text-align: center; padding: 20px;">
+              <div style="font-size: 3rem; margin-bottom: 8px;">🛡️📱</div>
+              <div style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem;">CampusGate Pass</div>
+              <div style="font-size: 0.78rem; opacity: 0.85;">Digital Outing & Parent SMS Pass</div>
+            </div>
+            <span class="project-category-badge">Security • Mobile Web</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tech-pills">
+              <span class="tech-tag featured">PWA</span>
+              <span class="tech-tag">Twilio</span>
+              <span class="tech-tag">Supabase Auth</span>
+            </div>
+            <h3>CampusGate Pass</h3>
+            <p>Frictionless digital gate pass replacing paper logbooks with automated parent SMS approvals, dynamic QR code tokens, and warden departure tracking.</p>
+            <div class="project-metrics-row">
+              <span>Gate Queue Time: <strong>&lt; 5 Seconds</strong></span>
+              <span>Total Passes: <strong>48k Issued</strong></span>
+            </div>
+            <div class="project-card-footer">
+              <a href="#contact" class="card-action-link">
+                Learn More
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Verified Security</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS & ENGINEERING ARSENAL
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="section-pill-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & Tech Arsenal</h2>
+        <p class="section-subtitle">
+          Battle-tested tools and frameworks used to engineer resilient applications from the database layer to pixel-perfect micro-interactions.
+        </p>
+      </div>
+
+      <div class="skills-categories-grid">
+        <!-- Category 1: AI & LLM Systems -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🤖</div>
+            <h3>AI & LLM Systems</h3>
+          </div>
+          <div class="skills-items-list">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>RAG & Vector Retrieval (Pinecone, Chroma)</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>OpenAI / Anthropic APIs & Tool Calling</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>LangChain & Agentic Orchestration</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>Prompt Engineering & Guardrails</span>
+                <span>96%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 96%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Full-Stack Web -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3>Full-Stack Engineering</h3>
+          </div>
+          <div class="skills-items-list">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>React, Next.js & TypeScript</span>
+                <span>94%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 94%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>Python & FastAPI / Node.js</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>PostgreSQL, Supabase & Redis</span>
+                <span>86%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 86%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>REST APIs & WebSockets</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 92%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: UI/UX & Craft -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🎨</div>
+            <h3>UI/UX & Product Craft</h3>
+          </div>
+          <div class="skills-items-list">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>Vanilla CSS, Glassmorphism & Animations</span>
+                <span>98%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 98%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>Figma Prototyping & Design Systems</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>Responsive & Mobile-First UX</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span>User Testing & Accessibility (a11y)</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT & JOURNEY SECTION
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Visual Profile Card -->
+        <div class="about-visual-card">
+          <div class="about-avatar-display">
+            <img src="assets/avatar.jpg" alt="Alex Chen">
+          </div>
+          <h3>Alex Chen</h3>
+          <p class="about-role">AI Engineer & Product Builder</p>
+          <div class="about-badges-flex">
+            <span class="about-badge">📍 San Francisco / Remote</span>
+            <span class="about-badge">🎓 CS & AI Degree</span>
+            <span class="about-badge">🚀 Founder Spirit</span>
+          </div>
+        </div>
+
+        <!-- Story & Journey Milestones -->
+        <div class="about-text-content">
+          <span class="section-pill-tag">My Story</span>
+          <h2>Building Human-Centered AI for Real-World Problems</h2>
+          <p class="about-bio-text">
+            When I moved to campus, I experienced firsthand the chaos of finding a safe hostel room, deciphering unwritten mess policies, and waiting days for simple maintenance requests. 
+            I realized that modern conversational AI could bridge this communication barrier and give every student a reliable, friendly copilot.
+          </p>
+          <p class="about-bio-text">
+            That insight sparked <strong>Hostel Buddy AI</strong>. Today, I dedicate my engineering focus to creating tactile, gorgeous, and delightfully intuitive software powered by generative AI.
+          </p>
+
+          <div class="journey-milestones">
+            <div class="milestone-item">
+              <div class="milestone-icon">🏆</div>
+              <div class="milestone-detail">
+                <h4>2026: Architect & Creator — Hostel Buddy AI</h4>
+                <p>Built end-to-end platform serving 15,000+ students and 120+ cataloged hostels across 6 campus clusters.</p>
+              </div>
+            </div>
+
+            <div class="milestone-item">
+              <div class="milestone-icon">⚡</div>
+              <div class="milestone-detail">
+                <h4>2025: AI Solutions Engineer @ NextGen Tech</h4>
+                <p>Designed retrieval pipelines and low-latency API wrappers for conversational SaaS tools.</p>
+              </div>
+            </div>
+
+            <div class="milestone-item">
+              <div class="milestone-icon">🎓</div>
+              <div class="milestone-detail">
+                <h4>2024: Winner @ National Campus Innovation Hackathon</h4>
+                <p>Awarded 1st place for autonomous grievance routing algorithms in student housing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & COLLABORATION SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info-panel">
+          <span class="section-pill-tag">Get in Touch</span>
+          <h2>Let's Build Something Exceptional Together</h2>
+          <p>
+            Whether you want to deploy <strong>Hostel Buddy AI</strong> to your university, discuss an AI product collaboration, or hire a full-stack engineer, my inbox is always open.
+          </p>
+
+          <div class="contact-channel-list">
+            <div class="contact-channel-item">
+              <div class="channel-icon">✉️</div>
+              <div class="channel-info">
+                <h5>Email Address</h5>
+                <strong>alex.chen.innovator@gmail.com</strong>
+              </div>
+              <button class="copy-email-btn" id="copyEmailBtn" data-email="alex.chen.innovator@gmail.com">Copy</button>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">🐙</div>
+              <div class="channel-info">
+                <h5>GitHub Profile</h5>
+                <strong>github.com/alexchen-ai</strong>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="copy-email-btn">Visit</a>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="channel-icon">💼</div>
+              <div class="channel-info">
+                <h5>LinkedIn</h5>
+                <strong>linkedin.com/in/alexchen-dev</strong>
+              </div>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="copy-email-btn">Connect</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-card">
+          <h3>Send a Direct Message</h3>
+          <p>Fill out the form below and I'll get back to you within 24 hours.</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="userName">Your Name</label>
+              <input type="text" id="userName" class="form-control" placeholder="e.g. Maya Patel" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userEmail">Email Address</label>
+              <input type="email" id="userEmail" class="form-control" placeholder="maya@university.edu" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userProject">Project Type / Topic</label>
+              <select id="userProject" class="form-control">
+                <option value="hostel-buddy">Hostel Buddy AI Deployment</option>
+                <option value="ai-consulting">AI & Full-Stack Consulting</option>
+                <option value="full-time">Full-Time Career Opportunity</option>
+                <option value="chat">Just saying hi / Feedback</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userMessage">Message</label>
+              <textarea id="userMessage" class="form-control" placeholder="Tell me about your project, campus requirements, or goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit-btn" id="submitFormBtn">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODAL: FULL DESIGN VIEWER FOR HOSTEL BUDDY MOCKUP
+       ========================================================================== -->
+  <div class="modal-overlay" id="mockupModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Hostel Buddy AI — High-Resolution Design Canvas</h3>
+        <button class="modal-close-btn" id="closeMockupModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/hostel-buddy-full.png" alt="Hostel Buddy AI Full Screen Interface" class="modal-img-display">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST FEEDBACK SYSTEM
+       ========================================================================== -->
+  <div class="toast-box" id="toastBox">
+    <span class="toast-icon">✓</span>
+    <span id="toastMessage">Action completed successfully!</span>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon-wrap" style="width: 36px; height: 36px; font-size: 1rem;">
+              🏠
+            </div>
+            <div class="brand-text">
+              <span>Hostel Buddy</span>
+              <span class="brand-ai-badge">AI</span>
+            </div>
+          </div>
+          <p>
+            Crafting human-first AI experiences and high-performance digital products for the next generation of learners and builders.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#spotlight">Hostel Buddy Case Study</a></li>
+            <li><a href="#projects">All Projects</a></li>
+            <li><a href="#skills">Skills & Arsenal</a></li>
+            <li><a href="#about">About & Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Featured Works</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#spotlight">Hostel Buddy AI</a></li>
+            <li><a href="#projects">CampusFlow AI</a></li>
+            <li><a href="#projects">StudySync AI</a></li>
+            <li><a href="#projects">MessPulse IoT</a></li>
+            <li><a href="#projects">RoomieMatch AI</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Alex Chen. All rights reserved. Created with modern AI aesthetics.</p>
+        <p>Built with Vanilla HTML5, CSS3, & ES6 JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
